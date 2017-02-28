@@ -20,6 +20,19 @@ using namespace std;
 
 int main()
 {
+	cout << "The array arranging machine" << endl;
+	int size;
+	cout << "How big of an array? ";
+	cin >> size;
+	int *pNumbers = new int[size];
+	for (int i = 0; i < size; i++)
+	{
+		cout << "number " << (i + 1) << ": ";
+		cin >> pNumbers[i];
+	}
+	
+	cout << "Now in reverse" << endl;
+	_getch();
 
 
 	_getch();
