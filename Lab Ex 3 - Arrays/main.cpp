@@ -1,5 +1,6 @@
 
-// Lab Exercise 3 - Arrays
+// Ryan Pomplun & Dylan Jarling
+//Lab Exercise 3 - Arrays
 // Instructions:
 /*
 	[ ] Write a program that performs the following:
@@ -15,6 +16,8 @@
 
 #include <iostream>
 #include <conio.h>
+#include <algorithm>
+
 
 using namespace std;
 
@@ -33,8 +36,36 @@ int main()
 	
 	cout << "Now in reverse" << endl;
 	_getch();
+	for (int i = (size - 1); i >= 0; i--)
+	{
+		cout << pNumbers[i] << ", ";		
+	}
+	cout << endl;
+	_getch();
 
+	int max = pNumbers[0];
+	for (int i = 1; i < size; i++)
+	{
+		if (pNumbers[i] > max)
+		{
+			max = pNumbers[i];
+		}
+	}
 
+	int min = pNumbers[0];
+	for (int i = 1; i < size; i++)
+	{
+		if (pNumbers[i] < min)
+		{
+			min = pNumbers[i];
+		}
+	}
+	
+	cout << "With a high of " << max << endl;
+	_getch();
+	cout << "...and a low of " << min << endl;
+	_getch();
+	cout << "followed by patches of sunshine, later in the week";
 	_getch();
 	return 0;
 }
